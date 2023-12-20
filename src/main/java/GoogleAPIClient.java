@@ -81,9 +81,10 @@ public class GoogleAPIClient extends Client {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		Client cl = new GoogleAPIClient();
+		GoogleAPIClient cl = new GoogleAPIClient();
 		cl.open();
-		System.out.println("main isch over.");
+		// System.out.println(cl.translator.translate(new StructValue(new String[] {"srcLang", "trgLang", "text"}, new Value[] {new StringValue("de"), new StringValue("en"), new StringValue("Hallo.")})));
+		// System.out.println("main isch over.");
 		//cl.output(null);
 	}
 

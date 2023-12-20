@@ -19,7 +19,7 @@ dependencies {
   }
   implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.21.0.1'
   implementation group: 'org.json', name: 'json', version: '20180130'
-  implementation 'com.github.lkuza2:java-speech-api:v2.02'
+  implementation 'com.github.lkuza2:java-speech-api:bd278833f1'
   implementation group: 'com.github.axet', name: 'java-flac-encoder', version: '0.3.8'
 }
 
