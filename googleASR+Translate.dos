@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wizard SYSTEM "Wizard.dtd">
+
+<wizard>
+	<device id="5e693032-96a9-11e6-8a48-4fb809552f54">
+		<name>GoogleASR</name>
+		<connector class="com.clt.dialog.client.RendezvousCLTConnector">
+			<att name="Service Name" type="string" value="GoogleAPI"/>
+			<att name="Server" type="string" value=""/>
+		</connector>
+		<icon width="16">AAAAAAAAAAAAAAAAAAAAABoAAAAzAAAARwAAAFQAAABUAAAARwAAADMAAAAaAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAADAAAADMAAAB4ampqrLOzs9bY2Njz6urq8+rq6tbY2Niss7OzeGpqajMA
+AAAMAAAAAAAAAAAAAAAAAAAADAAAAD4QEBCcn5+f5ODg4P/w8PD/8PDw//Dw8P/w8PD/8PDw//Dw
+8OTg4OCcn5+fPhAQEAwAAAAAAAAAAAAAADcXFxecnZ2d9unp6f/u7u7/7u7u/+7u7v+tra3/ra2t
+/+7u7v/u7u7/7u7u9unp6ZydnZ03FxcXAAAAABoAAAB5Z2dn5Nvb2//r6+v/6+vr/+vr6//r6+v/
+ampq/2pqav/r6+v/6+vr/+vr6//r6+vk29vbeWdnZxoAAAA7IyMjrK2trf/o6Oj/6Ojo/+jo6P/o
+6Oj/6Ojo/19fX/9fX1//6Ojo/+jo6P/o6Oj/6Ojo/+jo6Kytra07IyMjThoaGtXPz8//5eXl/+Xl
+5f/l5eX/5eXl/+Xl5f9eXl7/Xl5e/+Xl5f/l5eX/5eXl/+Xl5f/l5eXVz8/PThoaGlQMDAzz3Nzc
+/+Hh4f/h4eH/4eHh/21tbf/h4eH/W1tb/1tbW//h4eH/bW1t/+Hh4f/h4eH/4eHh89zc3FQMDAxS
+DAwM89fX1//c3Nz/3Nzc/9zc3P9cXFz/3Nzc/29vb/9vb2//3Nzc/1xcXP/c3Nz/3Nzc/9zc3PPX
+19dSDAwMUDAwMNTExMT/2NjY/9jY2P/Y2Nj/hYWF/6CgoP+vr6//r6+v/6CgoP+FhYX/2NjY/9jY
+2P/Y2NjUxMTEUDAwMEddXV2no6Oj/9XV1f/V1dX/1dXV/8/Pz/+Kior/i4uL/4uLi/+Kior/z8/P
+/9XV1f/V1dX/1dXVp6Ojo0ddXV00k5OTcWZmZuLFxcX/0dHR/9HR0f/R0dH/0dHR/29vb/9vb2//
+0dHR/9HR0f/R0dH/0dHR4sXFxXFmZmY0k5OTFf///0pubm6Uj4+P9cvLy//Ozs7/zs7O/2ZmZv9q
+amr/ampq/2ZmZv/Ozs7/zs7O9cvLy5SPj49Kbm5uFf///wAAAAAuzc3NSl1dXZOOjo7hwMDA/8vL
+y//Ly8v/y8vL/8vLy//Ly8v/y8vL4cDAwJOOjo5KXV1dLs3NzQAAAAAAAAAACv///zTT09NKeXl5
+bmZmZqSdnZ3Subm58sXFxfLFxcXSubm5pJ2dnW5mZmZKeXl5NNPT0wr///8AAAAAAAAAAAAAAAAK
+////Kv///0i8vLxIeHh4SDw8PEcSEhJHEhISSDw8PEh4eHhIvLy8Kv///wr///8AAAAAAAAAAA==</icon>
+	</device>
+	<plugin type="dialogos.plugin.tts">
+	</plugin>
+	<graph directed="1" Graphic="1" Layout="points">
+		<att name="width" type="integer" value="1462"/>
+		<att name="height" type="integer" value="990"/>
+		<groovyFunctions></groovyFunctions>
+		<variable uid="713ffdd3-96cd-11e6-911d-415328a19ef9">
+			<name>result</name>
+			<type>string</type>
+			<value>undefined</value>
+		</variable>
+		<variable uid="65fbfecb-96d6-11e6-baae-93655b341930">
+			<name>erkennung</name>
+			<type>string</type>
+			<value>undefined</value>
+		</variable>
+		<variable uid="65fc25dc-96d6-11e6-baae-93655b341930">
+			<name>uebersetzung</name>
+			<type>string</type>
+			<value>undefined</value>
+		</variable>
+		<node uid="5e6ba134-96a9-11e6-8a48-4fb809552f54" class="com.clt.diamant.graph.nodes.StartNode">
+			<graphics x="207" y="89" fill="#9999ff"/>
+			<att name="title" type="string" value="Start"/>
+		</node>
+		<node uid="5e6ba137-96a9-11e6-8a48-4fb809552f54" class="com.clt.diamant.graph.nodes.EndNode">
+			<graphics x="597" y="156" fill="#9999ff"/>
+			<att name="title" type="string" value="Ende"/>
+		</node>
+		<node uid="65fc25dd-96d6-11e6-baae-93655b341930" class="com.clt.diamant.graph.nodes.InputNode">
+			<graphics x="287" y="154" fill="#ff5a5a"/>
+			<att name="title" type="string" value="Google Speech"/>
+			<att name="output" type="list">
+				<att name="5e693032-96a9-11e6-8a48-4fb809552f54" type="list">
+					<att name="Text" type="string" value="{command=&quot;recognize&quot;, args={timeout=9500}}"/>
+				</att>
+			</att>
+			<att name="reset" type="boolean" value="0"/>
+			<att name="wait" type="boolean" value="0"/>
+			<att name="discard" type="boolean" value="0"/>
+			<att name="ignoreInputHandlers" type="boolean" value="0"/>
+		</node>
+		<node uid="65fc25de-96d6-11e6-baae-93655b341930" class="de.saar.coli.dialogos.marytts.plugin.TTSNode">
+			<graphics x="290" y="89" fill="#00b200"/>
+			<att name="title" type="string" value="Aufforderung"/>
+			<att name="prompt" type="text">
+				<value>Was soll ich übersetzen?</value>
+			</att>
+			<att name="prompt_type" type="string" value="text"/>
+			<att name="wait" type="boolean" value="1"/>
+			<att name="await_silence" type="boolean" value="0"/>
+		</node>
+		<node uid="65fc25df-96d6-11e6-baae-93655b341930" class="de.saar.coli.dialogos.marytts.plugin.TTSNode">
+			<graphics x="429" y="92" fill="#00b200"/>
+			<att name="title" type="string" value="Wiederholung"/>
+			<att name="prompt" type="text">
+				<value>erkennung + &quot; bedeutet auf englisch: &quot;</value>
+			</att>
+			<att name="prompt_type" type="string" value="expression"/>
+			<att name="wait" type="boolean" value="1"/>
+			<att name="await_silence" type="boolean" value="0"/>
+		</node>
+		<node uid="65fc25e0-96d6-11e6-baae-93655b341930" class="de.saar.coli.dialogos.marytts.plugin.TTSNode">
+			<graphics x="582" y="92" fill="#00b200"/>
+			<att name="title" type="string" value="Übersetzung"/>
+			<att name="voice" type="string" value="cmu-slt-hsmm"/>
+			<att name="prompt" type="text">
+				<value>&quot;&quot; + uebersetzung</value>
+			</att>
+			<att name="prompt_type" type="string" value="expression"/>
+			<att name="wait" type="boolean" value="1"/>
+			<att name="await_silence" type="boolean" value="0"/>
+		</node>
+		<node uid="714024e4-96cd-11e6-911d-415328a19ef9" class="com.clt.diamant.graph.nodes.InputNode">
+			<graphics x="415" y="152" fill="#ff5a5a"/>
+			<att name="title" type="string" value="Google Translate"/>
+			<att name="output" type="list">
+				<att name="5e693032-96a9-11e6-8a48-4fb809552f54" type="list">
+					<att name="Text" type="string" value="{command = &quot;translate&quot;, args = {srcLang = &quot;de-DE&quot;, trgLang = &quot;en-US&quot;, text=erkennung}}"/>
+				</att>
+			</att>
+			<att name="reset" type="boolean" value="0"/>
+			<att name="wait" type="boolean" value="0"/>
+			<att name="discard" type="boolean" value="0"/>
+			<att name="ignoreInputHandlers" type="boolean" value="0"/>
+		</node>
+		<node uid="cad7e3e0-96d7-11e6-8202-3d7668e25e70" class="com.clt.diamant.graph.nodes.SleepNode">
+			<graphics x="207" y="154" fill="#99ffff"/>
+			<att name="title" type="string" value="Warten"/>
+			<att name="time" type="string" value="1"/>
+		</node>
+		<edge src="5e6ba134-96a9-11e6-8a48-4fb809552f54" tgt="cad7e3e0-96d7-11e6-8202-3d7668e25e70">
+		</edge>
+		<edge src="65fc25dd-96d6-11e6-baae-93655b341930" tgt="65fc25df-96d6-11e6-baae-93655b341930">
+			<att name="condition" type="string" value="erkennung"/>
+		</edge>
+		<edge src="65fc25de-96d6-11e6-baae-93655b341930" tgt="65fc25dd-96d6-11e6-baae-93655b341930">
+		</edge>
+		<edge src="65fc25df-96d6-11e6-baae-93655b341930" tgt="714024e4-96cd-11e6-911d-415328a19ef9">
+		</edge>
+		<edge src="65fc25e0-96d6-11e6-baae-93655b341930" tgt="5e6ba137-96a9-11e6-8a48-4fb809552f54">
+		</edge>
+		<edge src="714024e4-96cd-11e6-911d-415328a19ef9" tgt="65fc25e0-96d6-11e6-baae-93655b341930">
+			<att name="condition" type="string" value="uebersetzung"/>
+		</edge>
+		<edge src="cad7e3e0-96d7-11e6-8202-3d7668e25e70" tgt="65fc25de-96d6-11e6-baae-93655b341930">
+		</edge>
+	</graph>
+</wizard>
